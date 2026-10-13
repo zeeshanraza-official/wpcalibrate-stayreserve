@@ -1,0 +1,85 @@
+/**
+ * Admin Styles for WPCalibrate StayReserve.
+ *
+ * @package WPCalibrate\StayReserve
+ */
+
+.wpcsr-admin-wrap {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.wpcsr-status-pill {
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 12px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: capitalize;
+	line-height: 1.4;
+}
+
+.status-confirmed, .payment-paid {
+	background-color: #edf7ed;
+	color: #1e4620;
+	border: 1px solid #c8e6c9;
+}
+
+.status-pending, .status-on_hold, .payment-pending {
+	background-color: #fff8e5;
+	color: #8c5300;
+	border: 1px solid #ffe082;
+}
+
+.status-cancelled, .status-failed, .payment-failed {
+	background-color: #fde8e8;
+	color: #9b1c1c;
+	border: 1px solid #f8b4b4;
+}
+
+.status-completed {
+	background-color: #e8f4fd;
+	color: #0c5460;
+	border: 1px solid #bee5eb;
+}
+
+.status-refunded, .payment-refunded {
+	background-color: #f3f4f6;
+	color: #374151;
+	border: 1px solid #d1d5db;
+}
+
+.wpcsr-calendar-table th,
+.wpcsr-calendar-table td {
+	vertical-align: middle;
+}
+
+/* RTL Layout Support */
+body.rtl .wpcsr-room-card {
+	direction: rtl;
+	text-align: right;
+}
+
+/* Support Channels Grid */
+.wpcsr-support-channels {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px;
+	margin-top: 20px;
+}
+
+@media (max-width: 1100px) {
+	.wpcsr-support-channels {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.wpcsr-support-channels {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+body.rtl .wpcsr-search-form {
+	direction: rtl;
+}

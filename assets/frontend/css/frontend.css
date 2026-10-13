@@ -1,0 +1,110 @@
+/**
+ * Frontend Styles for WPCalibrate StayReserve.
+ *
+ * @package WPCalibrate\StayReserve
+ */
+
+:root {
+	--wpcsr-primary: #0073aa;
+	--wpcsr-primary-hover: #005177;
+	--wpcsr-success: #2e7d32;
+	--wpcsr-danger: #b32d2e;
+	--wpcsr-border: #e2e8f0;
+	--wpcsr-bg-light: #f8fafc;
+	--wpcsr-text-main: #1a202c;
+	--wpcsr-text-muted: #718096;
+}
+
+.wpcsr-booking-container {
+	font-family: inherit;
+	color: var(--wpcsr-text-main);
+	line-height: 1.5;
+	box-sizing: border-box;
+}
+
+.wpcsr-booking-container *,
+.wpcsr-booking-container *::before,
+.wpcsr-booking-container *::after {
+	box-sizing: inherit;
+}
+
+/* Accessible interactive focus */
+.wpcsr-booking-container input:focus-visible,
+.wpcsr-booking-container select:focus-visible,
+.wpcsr-booking-container textarea:focus-visible,
+.wpcsr-booking-container button:focus-visible,
+.wpcsr-booking-container a:focus-visible {
+	outline: 2px solid var(--wpcsr-primary);
+	outline-offset: 2px;
+}
+
+/* Button styles */
+.wpcsr-btn-primary {
+	background-color: var(--wpcsr-primary);
+	color: #ffffff !important;
+	border: none;
+	border-radius: 6px;
+	padding: 12px 24px;
+	font-size: 15px;
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	transition: background-color 0.15s ease-in-out;
+}
+
+.wpcsr-btn-primary:hover,
+.wpcsr-btn-primary:focus {
+	background-color: var(--wpcsr-primary-hover);
+}
+
+/* Status pills */
+.wpcsr-status-pill {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 20px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.wpcsr-status-pill.status-confirmed {
+	background-color: #edf7ed;
+	color: #1e4620;
+}
+
+.wpcsr-status-pill.status-pending,
+.wpcsr-status-pill.status-on_hold {
+	background-color: #fff8e5;
+	color: #8c5300;
+}
+
+.wpcsr-status-pill.status-cancelled {
+	background-color: #fde8e8;
+	color: #9b1c1c;
+}
+
+/* Responsive Card Layouts */
+@media (max-width: 768px) {
+	.wpcsr-room-card {
+		grid-template-columns: 1fr !important;
+	}
+
+	.wpcsr-search-form > div {
+		grid-template-columns: 1fr !important;
+	}
+}
+
+/* RTL Layout */
+[dir="rtl"] .wpcsr-booking-container,
+body.rtl .wpcsr-booking-container {
+	direction: rtl;
+	text-align: right;
+}
+
+[dir="rtl"] .wpcsr-room-card,
+body.rtl .wpcsr-room-card {
+	direction: rtl;
+	text-align: right;
+}

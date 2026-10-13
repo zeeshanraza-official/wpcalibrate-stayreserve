@@ -1,0 +1,5 @@
+# Ignore development tests and logs from git
+tests/
+*.log
+.DS_Store
+Thumbs.db
